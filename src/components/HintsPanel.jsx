@@ -13,7 +13,7 @@ export default function HintsPanel({ hints, hintsLoaded, shownHints, onLoadHints
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
       {/* Header row */}
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-base font-semibold text-gray-700">Hints &amp; Solution</h2>
+        <h2 className="text-base font-semibold text-gray-700">Hints</h2>
         <button
           onClick={onLoadHints}
           className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 rounded-lg text-sm font-medium transition-colors"
@@ -39,7 +39,10 @@ export default function HintsPanel({ hints, hintsLoaded, shownHints, onLoadHints
               <span className="shrink-0 w-6 h-6 rounded-full bg-amber-400 text-white text-xs font-bold flex items-center justify-center mt-0.5">
                 {i + 1}
               </span>
-              <p className="text-gray-700 text-sm leading-relaxed">{hint}</p>
+              <div>
+                <p className="text-amber-700 text-xs font-semibold mb-0.5">Hint {i + 1}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">{hint}</p>
+              </div>
             </div>
           ))}
 
@@ -48,7 +51,7 @@ export default function HintsPanel({ hints, hintsLoaded, shownHints, onLoadHints
               onClick={onNextHint}
               className="w-full py-2.5 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-200 hover:border-blue-300 rounded-xl hover:bg-blue-50 transition-colors"
             >
-              Show next hint ({shownHints}/{hints.length})
+              Show Hint {shownHints + 1} of {hints.length}
             </button>
           )}
 

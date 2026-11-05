@@ -3,6 +3,9 @@
     "id": "1.1a",
     "topic": "Quadratic Equations",
     "difficulty": "Easy",
+    "phase": "pre",
+    "pairId": "pair-quadratic",
+    "hard": false,
     "prompt": "You're shooting a free throw at RIMAC gym. The ball's trajectory is shown below, with the highest point (vertex) and both ground-level points labeled. Write the function that models this trajectory.",
     "image": "01_rimac_parabola_l1.png",
     "answer": [
@@ -11,180 +14,72 @@
       "f(x)=-(x-2)^2+4"
     ],
     "hints": [
-      "The vertex and both roots (x-intercepts) are already labeled on the graph — you don't need to derive anything.",
-      "Since you have the vertex (2, 4), try vertex form: y = a(x-h)^2 + k.",
-      "Plug in one of the roots, e.g. (0, 0), to solve for a. You should get a = -1.",
-      "Final answer: y = -(x-2)^2 + 4"
-    ]
-  },
-  {
-    "id": "1.1b",
-    "topic": "Quadratic Equations",
-    "difficulty": "Medium",
-    "prompt": "The parabolic path of a firework at the Sun God Festival is shown below, with the vertex and two ground points labeled — but with less convenient numbers than Level 1. Write the function that models this trajectory.",
-    "image": "02_sungod_parabola_l2.png",
-    "answer": [
-      "y=(x-3)^2-4",
-      "y=x^2-6x+5"
-    ],
-    "hints": [
-      "Decide whether vertex form or intercept form is easier here — the vertex (3, -4) is given directly.",
-      "Try vertex form: y = a(x-h)^2 + k, with (h, k) = (3, -4).",
-      "Substitute a root like (1, 0) to solve for a. Watch your signs since the vertex y-value is negative.",
-      "Final answer: y = (x-3)^2 - 4"
-    ]
-  },
-  {
-    "id": "1.2a",
-    "topic": "Function Transformations",
-    "difficulty": "Easy",
-    "prompt": "The gray dashed curve shows a dining hall's original wait-time curve y = x² (x = arrival time offset, y = wait minutes). The blue solid curve is this week's new curve after a menu change — a pure translation, no reflection or stretch. Write the expression for the new curve.",
-    "image": "03_dining_wait_l1.png",
-    "answer": [
-      "y=(x-2)^2+1"
-    ],
-    "hints": [
-      "This is a pure shift of y = x² — no flip, no stretch.",
-      "Find the new vertex position by reading it off the graph.",
-      "Recall: shifting right by h and up by k gives y = (x-h)^2 + k.",
-      "Final answer: y = (x-2)^2 + 1"
-    ]
-  },
-  {
-    "id": "1.2b",
-    "topic": "Function Transformations",
-    "difficulty": "Medium",
-    "prompt": "The gray dashed curve is y = x², and the blue solid curve is the shifted version (representing a campus service response-time curve, e.g. Triton Shuttle wait time). Write the expression for the new function.",
-    "image": "04_shuttle_shift_l2.png",
-    "answer": [
-      "y=(x-2)^2-3"
-    ],
-    "hints": [
-      "The sign convention for shift direction is the most common mistake here — double check left/right and up/down.",
-      "Read the new vertex coordinates off the graph carefully.",
-      "Remember: shifting right subtracts inside the parentheses; shifting down subtracts outside.",
-      "Final answer: y = (x-2)^2 - 3"
-    ]
-  },
-  {
-    "id": "1.3a",
-    "topic": "Circles",
-    "difficulty": "Easy",
-    "prompt": "There's a circular plaza around the Sun God statue, centered at the origin with radius 5 (center and one point on the circle are labeled). Write the standard equation of this circle.",
-    "image": "05_sungod_circle_l1.png",
-    "answer": [
-      "x^2+y^2=25"
-    ],
-    "hints": [
-      "The center is at the origin, which is the simplest case of the standard circle equation.",
-      "Recall the standard form: x^2 + y^2 = r^2 when centered at (0,0).",
-      "The radius is 5, so r^2 = 25.",
-      "Final answer: x^2 + y^2 = 25"
-    ]
-  },
-  {
-    "id": "1.3b",
-    "topic": "Circles",
-    "difficulty": "Medium",
-    "prompt": "The figure below shows another circular fountain on campus (near Warren Mall), with the center not at the origin. Write the standard equation given the labeled center and point on the circle.",
-    "image": "06_warren_circle_l2.png",
-    "answer": [
-      "(x-2)^2+(y+1)^2=16"
-    ],
-    "hints": [
-      "The center is not at the origin this time, so use the general standard form.",
-      "Recall: (x-h)^2 + (y-k)^2 = r^2, where (h,k) is the center. Watch the sign when the center coordinate is negative.",
-      "The radius is the distance from the center (2,-1) to the labeled point (6,-1), which is 4.",
-      "Final answer: (x-2)^2 + (y+1)^2 = 16"
+      "The vertex and both roots (x-intercepts) are already labeled on the graph — you don't need to derive anything new, just read them off.",
+      "Since you know the vertex (2, 4), try vertex form: y = a(x-h)^2 + k.",
+      "Plug in one of the labeled roots (where y = 0) to solve for a."
     ]
   },
   {
     "id": "1.4a",
     "topic": "Piecewise Functions",
     "difficulty": "Easy",
+    "phase": "pre",
+    "pairId": "pair-piecewise",
+    "hard": false,
     "prompt": "A UCSD parking lot charges as shown: free for the first 2 hours, then $3/hour after that. Write the fee function for 0≤x<2 and for x≥2.",
     "image": "07_parking_l1.png",
     "answer": [
       "f(x)=0 for 0<=x<2; f(x)=3(x-2) for x>=2"
     ],
     "hints": [
-      "The first piece is a constant function (flat line) — that part is free.",
-      "For x < 2, the fee is always $0.",
-      "For x ≥ 2, the fee grows at $3 per hour past the 2-hour mark.",
-      "Final answer: f(x) = 0 for 0≤x<2; f(x) = 3(x-2) for x≥2"
+      "The first piece is a flat, constant function — notice what that implies about the fee for small x.",
+      "For x < 2, think about what single constant value the fee stays at.",
+      "For x ≥ 2, figure out the rate per hour past the free period, and how to express hours past 2 in terms of x."
     ]
   },
   {
-    "id": "1.4b",
-    "topic": "Piecewise Functions",
+    "id": "1.3b",
+    "topic": "Circles",
     "difficulty": "Medium",
-    "prompt": "The graph below shows another piecewise function (think of it as a Triton Card printing-quota fee schedule), connecting at x=1, with both pieces sloped. Write the expressions for both pieces.",
-    "image": "08_piecewise_l2.png",
+    "phase": "exposure",
+    "pairId": null,
+    "hard": false,
+    "prompt": "The figure below shows another circular fountain on campus (near Warren Mall), with the center not at the origin. Write the standard equation given the labeled center and point on the circle.",
+    "image": "06_warren_circle_l2.png",
     "answer": [
-      "f(x)=x+3 for x<=1; f(x)=-0.5(x-1)+4 for x>1"
+      "(x-2)^2+(y+1)^2=16"
     ],
     "hints": [
-      "Both pieces are sloped this time, which makes checking continuity at the connection point trickier than Level 1.",
-      "Don't forget to specify the domain restriction for each piece.",
-      "Find the slope and a point for each segment separately, then write each in point-slope or slope-intercept form.",
-      "Final answer: f(x) = x+3 for x≤1; f(x) = -0.5(x-1)+4 for x>1"
+      "The center is not at the origin this time, so you'll need the general standard form rather than the simple one.",
+      "Recall the standard form (x-h)^2 + (y-k)^2 = r^2, where (h,k) is the center — watch your signs when the center coordinate is negative.",
+      "To find r, think about the distance from the center to the labeled point on the circle."
     ]
   },
   {
     "id": "1.5a",
     "topic": "Similar Triangles",
     "difficulty": "Easy",
+    "phase": "exposure",
+    "pairId": null,
+    "hard": false,
     "prompt": "Near Geisel Library, a student (5.5 ft tall) stands beside a eucalyptus tree, casting a 2.4 ft shadow; at the same moment, the tree's shadow is 7.2 ft. Using similar triangles, find the height of the tree.",
     "image": "09_shadow_l1.png",
     "answer": [
       "16.5"
     ],
     "hints": [
-      "The two triangles sit side by side without overlapping, so you can apply the proportion directly — no auxiliary lines needed.",
+      "The two triangles sit side by side without overlapping, so you can set up a direct proportion — no auxiliary lines needed.",
       "Set up the ratio: student height / student shadow = tree height / tree shadow.",
-      "5.5 / 2.4 = h / 7.2",
-      "Final answer: h = 16.5 ft"
-    ]
-  },
-  {
-    "id": "1.5b",
-    "topic": "Similar Triangles",
-    "difficulty": "Medium",
-    "prompt": "In triangle ABC, D lies on AB and E lies on AC (imagine a triangular lawn on Warren Mall cut by two paths), with AD=2, DB=4, AE=3, BC=9. Determine whether DE is parallel to BC and find DE's length. Any auxiliary lines must be added by you.",
-    "image": "10_similar_triangle_de.png",
-    "answer": [
-      "cannot be determined",
-      "insufficient information",
-      "DE=3 if parallel is assumed"
-    ],
-    "hints": [
-      "The triangles here are nested (D on AB, E on AC), not side-by-side like 1.5a — think about what condition actually proves DE ∥ BC.",
-      "For DE ∥ BC (converse of the basic proportionality theorem), you'd need AD/DB = AE/EC.",
-      "You know AD/DB = 2/4 = 1/2, but EC (or AC) is never given — only AE=3 and BC=9.",
-      "Without EC, you can't verify the ratio, so DE ∥ BC cannot be confirmed from the given information. If you assume it's true anyway, DE/BC = AD/AB = 1/3, so DE = 3."
-    ]
-  },
-  {
-    "id": "1.6a",
-    "topic": "Distance and Midpoint",
-    "difficulty": "Easy",
-    "prompt": "The figure shows a simplified campus map on a coordinate grid. Geisel Library is at (2,3) and Price Center is at (8,3) — both on the same horizontal line. Find the distance and midpoint between them.",
-    "image": "11_campus_map_l1.png",
-    "answer": [
-      "distance=6, midpoint=(5,3)",
-      "6 and (5,3)"
-    ],
-    "hints": [
-      "Since both points share the same y-coordinate, you don't need the full distance formula.",
-      "The distance is just the difference in x-coordinates.",
-      "For the midpoint, average the x's and average the y's.",
-      "Final answer: distance = 6, midpoint = (5, 3)"
+      "Cross-multiply the ratio you set up and isolate the tree's height."
     ]
   },
   {
     "id": "1.6b",
     "topic": "Distance and Midpoint",
     "difficulty": "Medium",
+    "phase": "exposure",
+    "pairId": null,
+    "hard": false,
     "prompt": "Same campus-map coordinate system, but now Geisel Library is at (2,3) and RIMAC Gym is at (9,8) — not aligned horizontally or vertically. Find the distance and midpoint between them.",
     "image": "12_campus_map_l2.png",
     "answer": [
@@ -193,16 +88,18 @@
       "midpoint=(5.5,5.5)"
     ],
     "hints": [
-      "This time the points don't share a coordinate, so you need the full distance formula.",
-      "Distance = √((x₂-x₁)² + (y₂-y₁)²). Compute the differences first, then square each before adding.",
-      "For the midpoint, average the x's and average the y's separately — don't mix up the two formulas.",
-      "Final answer: distance = √74 ≈ 8.60, midpoint = (5.5, 5.5)"
+      "This time the two points don't share a coordinate, so you'll need the full distance and midpoint formulas rather than a shortcut.",
+      "For distance: √((x₂-x₁)² + (y₂-y₁)²) — compute each difference first, then square before adding.",
+      "For the midpoint, average the x-coordinates and the y-coordinates separately."
     ]
   },
   {
     "id": "2.1a",
     "topic": "Systems of Equations",
     "difficulty": "Easy",
+    "phase": "free",
+    "pairId": null,
+    "hard": false,
     "prompt": "UCSD offers two meal plans: Plan A costs y=x+1 and Plan B costs y=-x+5 (in some usage-based cost unit). Both lines are graphed. Solve algebraically for the intersection point and explain at what usage level the two plans cost the same.",
     "image": "13_mealplan_l1.png",
     "answer": [
@@ -210,360 +107,72 @@
       "x=2, y=3"
     ],
     "hints": [
-      "The two plans cost the same where the lines intersect — set the two expressions equal.",
-      "x + 1 = -x + 5",
-      "Solve for x first, then plug back in to find y.",
-      "Final answer: (2, 3) — the plans cost the same at usage level 2."
-    ]
-  },
-  {
-    "id": "2.1b",
-    "topic": "Systems of Equations",
-    "difficulty": "Medium",
-    "prompt": "Solve the system: x + 2y = 8, 2x - y = 5 (imagine these as budget constraint lines for TritonCash vs. Dining Dollars spending). The figure shows both lines. Solve algebraically for the intersection, then mark it on the graph to verify.",
-    "image": "14_system_intersection.png",
-    "answer": [
-      "(3.6,2.2)",
-      "x=3.6, y=2.2"
-    ],
-    "hints": [
-      "Try solving the second equation for y so you can substitute into the first.",
-      "From 2x - y = 5, y = 2x - 5.",
-      "Substitute into x + 2y = 8: x + 2(2x-5) = 8, then solve for x.",
-      "Final answer: x = 3.6, y = 2.2"
+      "The two plans cost the same exactly where their graphs intersect — think about what that means algebraically.",
+      "Set the two cost expressions equal to each other: x + 1 = -x + 5.",
+      "Once you solve for x, plug it back into either equation to get y."
     ]
   },
   {
     "id": "2.2a",
     "topic": "Distance-Time Graphs",
     "difficulty": "Easy",
+    "phase": "free",
+    "pairId": null,
+    "hard": false,
     "prompt": "Student A walks from Sixth College toward the library; Student B walks from Geisel Library in the opposite direction. Both distance-time graphs are already drawn (below). Read the meeting time and distance directly off the graph, then verify algebraically.",
     "image": "15_meet_l1.png",
     "answer": [
       "t=2, distance=30"
     ],
     "hints": [
-      "Both lines are already drawn — you just need to find where they cross.",
+      "Both lines are already drawn — you just need to find where they cross on the graph.",
       "Set the two distance expressions equal to each other and solve for t.",
-      "Then plug t back into either equation to check the distance value.",
-      "Final answer: they meet at t = 2 min, 30 m from Sixth College."
-    ]
-  },
-  {
-    "id": "2.2b",
-    "topic": "Distance-Time Graphs",
-    "difficulty": "Medium",
-    "prompt": "Cars A and B start 300 miles apart and drive toward each other at the same time. Car A travels at 80 mph (already graphed). Car B travels at 60 mph. First sketch Car B's graph, then find the time and location where they meet.",
-    "image": "16_cars_meet.png",
-    "answer": [
-      "t=15/7",
-      "2.14 hours",
-      "171.4 miles"
-    ],
-    "hints": [
-      "You have to draw Car B's line yourself this time — think about which direction it should go relative to Car A's.",
-      "Since they're moving toward each other, the sum of the distances they've each traveled equals 300 miles when they meet.",
-      "80t + 60t = 300",
-      "Final answer: t = 15/7 ≈ 2.14 hours, about 171.4 miles from Car A's start."
-    ]
-  },
-  {
-    "id": "2.3a",
-    "topic": "Optimization (Max Area)",
-    "difficulty": "Easy",
-    "prompt": "A rectangular garden behind the dorm needs fencing on all four sides, with 20 feet of fencing total. Let x be one side length. Write the area as a function of x and find the maximum area.",
-    "image": "17_garden_l1.png",
-    "answer": [
-      "25",
-      "x=5"
-    ],
-    "hints": [
-      "All four sides need fencing, so start with the perimeter equation: 2x + 2y = 20.",
-      "Solve for y in terms of x, then substitute into Area = x·y.",
-      "You'll get a downward parabola in x — its vertex gives the maximum.",
-      "Final answer: maximum area is 25 sq ft, at x = 5 (a square)."
-    ]
-  },
-  {
-    "id": "2.3b",
-    "topic": "Optimization (Max Area)",
-    "difficulty": "Medium",
-    "prompt": "You have 100 feet of fencing to enclose a rectangular area against a wall (no fencing needed along the wall side). Let x be the side perpendicular to the wall. Write the area as a function of x and find the maximum area.",
-    "image": "18_fence_l2.png",
-    "answer": [
-      "1250",
-      "x=25, y=50"
-    ],
-    "hints": [
-      "The wall replaces one side, so you only need fencing for the other three sides — two of length x and one of length y.",
-      "Set up: 2x + y = 100, and solve for y.",
-      "Substitute into Area = x·y and find the vertex of the resulting parabola.",
-      "Final answer: maximum area is 1250 sq ft, at x = 25, y = 50."
-    ]
-  },
-  {
-    "id": "2.4a",
-    "topic": "Word Problems (Systems)",
-    "difficulty": "Easy",
-    "prompt": "This quarter, Zhang is enrolled in twice as many units as Li. Together they have 24 units. Find how many units each is enrolled in.",
-    "image": null,
-    "answer": [
-      "Li=8, Zhang=16"
-    ],
-    "hints": [
-      "Let Li's units be a variable, then express Zhang's units in terms of it.",
-      "Zhang = 2 × Li",
-      "Zhang + Li = 24 — substitute and solve for Li first.",
-      "Final answer: Li = 8 units, Zhang = 16 units."
-    ]
-  },
-  {
-    "id": "2.4b",
-    "topic": "Word Problems (Systems)",
-    "difficulty": "Medium",
-    "prompt": "Ming's current age is 3 times his sister's age. In 5 years, Ming's age will be twice his sister's age. Find their current ages.",
-    "image": null,
-    "answer": [
-      "sister=5, Ming=15"
-    ],
-    "hints": [
-      "This time there are two different points in time — now, and 5 years from now. Make sure you add 5 to both people's ages, not just one.",
-      "Let sister's current age = s, so Ming's current age = 3s.",
-      "In 5 years: 3s + 5 = 2(s + 5)",
-      "Final answer: sister = 5, Ming = 15."
-    ]
-  },
-  {
-    "id": "2.5a",
-    "topic": "Simple Interest",
-    "difficulty": "Easy",
-    "prompt": "Li deposits $2,000 into an account earning 5% annual interest. How much is in the account after one year? If instead he splits the $2,000 equally between accounts earning 5% and 8%, how much total interest does he earn after one year?",
-    "image": null,
-    "answer": [
-      "$2100",
-      "$130"
-    ],
-    "hints": [
-      "For the first part, interest = principal × rate.",
-      "$2,000 × 0.05 = $100 interest, so the account has $2,100.",
-      "For the second part, split the $2,000 into two equal $1,000 amounts and calculate each interest separately.",
-      "Final answer: $2,100 after one year (single account); $130 total interest (split accounts)."
-    ]
-  },
-  {
-    "id": "2.5b",
-    "topic": "Simple Interest",
-    "difficulty": "Medium",
-    "prompt": "Li invests a total of $10,000 in two accounts: one earning 4% annual interest and the other earning 7% (unequal amounts). After one year, the total interest earned is $580. Find how much was invested in each account.",
-    "image": null,
-    "answer": [
-      "$4000 at 4%, $6000 at 7%"
-    ],
-    "hints": [
-      "Unlike 2.5a, the two amounts aren't equal now, so you need a real system of equations — one for the total amount, one for the total interest.",
-      "Let x = amount at 4%, so (10000 - x) = amount at 7%.",
-      "0.04x + 0.07(10000 - x) = 580",
-      "Final answer: $4,000 at 4%, $6,000 at 7%."
-    ]
-  },
-  {
-    "id": "2.6a",
-    "topic": "Projectile Motion",
-    "difficulty": "Easy",
-    "prompt": "You toss a frisbee along Library Walk. The height h (feet) vs. time t (seconds) graph is below, with the maximum point directly labeled. Read off the maximum height and the time it occurs.",
-    "image": "19_frisbee_l1.png",
-    "answer": [
-      "h=20, t=2"
-    ],
-    "hints": [
-      "The maximum point is already marked on the graph — no calculation needed here.",
-      "Just read the coordinates of that labeled point.",
-      "Make sure you match each coordinate to the right axis (time vs. height).",
-      "Final answer: maximum height 20 ft at t = 2 s."
-    ]
-  },
-  {
-    "id": "2.6b",
-    "topic": "Projectile Motion",
-    "difficulty": "Medium",
-    "prompt": "An object undergoes projectile motion. The graph shows height h (feet) vs. time t (seconds), with only the launch point (0,5) and another point (1,45) labeled — the maximum point is not directly marked. Given h(t) = -16t² + 56t + 5, find the maximum height and the time it occurs.",
-    "image": "20_projectile_l2.png",
-    "answer": [
-      "h=54, t=1.75"
-    ],
-    "hints": [
-      "This time the maximum isn't labeled, so you'll need the vertex formula rather than just reading the graph.",
-      "The time of the max is t = -b/(2a). Identify a and b from h(t) = -16t² + 56t + 5.",
-      "Don't stop at t — plug it back into h(t) to actually find the maximum height.",
-      "Final answer: maximum height 54 ft at t = 1.75 s."
-    ]
-  },
-  {
-    "id": "3.1a",
-    "topic": "Rational Equations",
-    "difficulty": "Easy",
-    "prompt": "Solve the equation: (x+1)/(x-2) = 4/(x-2), and find the value of x.",
-    "image": null,
-    "answer": [
-      "x=3"
-    ],
-    "hints": [
-      "Notice both sides have the exact same denominator.",
-      "Since the denominators match (and x ≠ 2), you can just set the numerators equal.",
-      "x + 1 = 4",
-      "Final answer: x = 3 (and remember to check it doesn't make the denominator zero)."
-    ]
-  },
-  {
-    "id": "3.1b",
-    "topic": "Rational Equations",
-    "difficulty": "Medium",
-    "prompt": "A TA claims the solution to this equation is x=3: (x+2)/(x-3) = 5/(x-3) + 1. Check whether the TA is correct and show your reasoning.",
-    "image": null,
-    "answer": [
-      "TA is wrong",
-      "x=3 is excluded/extraneous",
-      "identity true for all x except 3"
-    ],
-    "hints": [
-      "Don't just trust the claim — actually work through the algebra yourself.",
-      "Multiply every term by (x-3) to clear denominators.",
-      "x + 2 = 5 + (x - 3) → x + 2 = x + 2, which is true for any x — but check what value is NOT allowed here.",
-      "Final answer: the TA is wrong. x=3 makes the denominator zero, so it can't be a valid solution — the equation actually holds for every other real number."
-    ]
-  },
-  {
-    "id": "3.2a",
-    "topic": "Isosceles Triangle Judgment",
-    "difficulty": "Easy",
-    "prompt": "The triangle in the figure is labeled with sides AB=7.0 and AC=5.5. Determine whether this is an isosceles triangle.",
-    "image": "21_warren_triangle_l1.png",
-    "answer": [
-      "not isosceles"
-    ],
-    "hints": [
-      "Isosceles means at least two sides are equal — don't rely on how the picture looks, use the given numbers.",
-      "Compare AB and AC directly.",
-      "7.0 and 5.5 are clearly different values.",
-      "Final answer: not isosceles, based on the given side lengths."
+      "Once you have t, substitute it back into either equation to check the distance."
     ]
   },
   {
     "id": "3.2b",
     "topic": "Isosceles Triangle Judgment",
     "difficulty": "Medium",
+    "phase": "free",
+    "pairId": null,
+    "hard": true,
     "prompt": "Triangle ABC is labeled with AB=6.1 and AC=6.0 — visually very close to isosceles, differing by only 0.1. Determine whether this is isosceles and explain your reasoning.",
     "image": "22_isosceles_l2.png",
     "answer": [
       "not isosceles"
     ],
     "hints": [
-      "The figure might look isosceles at a glance — try not to let the visual impression override the actual numbers.",
-      "Compare the two given side lengths exactly as stated.",
-      "6.1 and 6.0 are close, but not equal.",
-      "Final answer: not isosceles — the two sides differ, even though only by 0.1."
+      "The figure might look isosceles at a glance — try not to let the visual impression override the actual numbers given.",
+      "Compare the two given side lengths exactly as stated, not as they appear in the drawing.",
+      "Think about how close two values need to be before they count as 'equal' in a mathematical sense."
     ]
   },
   {
-    "id": "3.3a",
-    "topic": "Pythagorean Theorem",
-    "difficulty": "Easy",
-    "prompt": "Your dorm whiteboard has length 8 and diagonal 10. Find the width and area.",
-    "image": "23_whiteboard_l1.png",
-    "answer": [
-      "width=6, area=48"
-    ],
-    "hints": [
-      "A rectangle's diagonal, length, and width form a right triangle — Pythagorean theorem applies.",
-      "length² + width² = diagonal²",
-      "8² + width² = 10² → width² = 36",
-      "Final answer: width = 6, area = 8 × 6 = 48."
-    ]
-  },
-  {
-    "id": "3.3b",
-    "topic": "Pythagorean Theorem",
+    "id": "2.6b",
+    "topic": "Projectile Motion",
     "difficulty": "Medium",
-    "prompt": "Another dorm's whiteboard has length 12 and diagonal 13. Find the width and area (first think carefully about whether the given information is sufficient).",
-    "image": "24_rectangle_l2.png",
+    "phase": "post",
+    "pairId": "pair-quadratic",
+    "hard": false,
+    "prompt": "An object undergoes projectile motion. The graph shows height h (feet) vs. time t (seconds), with only the launch point (0,5) and another point (1,45) labeled — the maximum point is not directly marked. Given h(t) = -16t² + 56t + 5, find the maximum height and the time it occurs.",
+    "image": "20_projectile_l2.png",
     "answer": [
-      "width=5, area=60"
+      "h=54, t=1.75"
     ],
     "hints": [
-      "The problem hints that the information might not be enough — but check for yourself rather than assuming.",
-      "Try the same Pythagorean relationship as before: length² + width² = diagonal².",
-      "12² + width² = 13² → width² = 25",
-      "Final answer: width = 5, area = 60. (The info actually was sufficient — 5-12-13 is a Pythagorean triple.)"
-    ]
-  },
-  {
-    "id": "3.4a",
-    "topic": "Inequalities",
-    "difficulty": "Easy",
-    "prompt": "Solve the inequality: 2x - 3 ≤ 11",
-    "image": null,
-    "answer": [
-      "x<=7"
-    ],
-    "hints": [
-      "Isolate x the same way you would for an equation.",
-      "Add 3 to both sides first.",
-      "Then divide both sides by 2 — since 2 is positive, the inequality direction doesn't change.",
-      "Final answer: x ≤ 7"
-    ]
-  },
-  {
-    "id": "3.4b",
-    "topic": "Inequalities",
-    "difficulty": "Medium",
-    "prompt": "Solve the inequality: -3x + 7 ≤ 22 (imagine it relates to a Triton Card printing-page limit constraint), and represent the solution set on a number line.",
-    "image": null,
-    "answer": [
-      "x>=-5"
-    ],
-    "hints": [
-      "Isolate the x term first: subtract 7 from both sides.",
-      "-3x ≤ 15",
-      "Now divide both sides by -3 — remember what happens to the inequality sign when dividing by a negative number.",
-      "Final answer: x ≥ -5 (the sign flips because you divided by a negative)."
-    ]
-  },
-  {
-    "id": "3.5a",
-    "topic": "Radical Equations",
-    "difficulty": "Easy",
-    "prompt": "Solve the equation: √(x+6) = x, and find the value of x.",
-    "image": null,
-    "answer": [
-      "x=3"
-    ],
-    "hints": [
-      "Square both sides to remove the square root, but remember you'll need to check your answers afterward.",
-      "x + 6 = x² → x² - x - 6 = 0",
-      "Factor: (x-3)(x+2) = 0, giving x = 3 or x = -2.",
-      "Final answer: x = 3. (x = -2 is extraneous — a square root can't equal a negative number.)"
-    ]
-  },
-  {
-    "id": "3.5b",
-    "topic": "Radical Equations",
-    "difficulty": "Medium",
-    "prompt": "Solve the equation: √(2x+3) = x, and find the value of x.",
-    "image": null,
-    "answer": [
-      "x=3"
-    ],
-    "hints": [
-      "Same approach as before — square both sides, then check both solutions carefully.",
-      "2x + 3 = x² → x² - 2x - 3 = 0",
-      "Factor: (x-3)(x+1) = 0, giving x = 3 or x = -1.",
-      "Final answer: x = 3. (x = -1 doesn't look as obviously wrong this time — substitute it back in to see why it's extraneous.)"
+      "This time the maximum isn't labeled on the graph, so you'll need to use the function itself rather than reading it off.",
+      "The time of the maximum is given by t = -b/(2a). Identify a and b from h(t) = -16t² + 56t + 5.",
+      "Once you have the time, think about what you still need to do to find the actual maximum height."
     ]
   },
   {
     "id": "3.6a",
     "topic": "Parallel Lines",
     "difficulty": "Easy",
+    "phase": "post",
+    "pairId": "pair-piecewise",
+    "hard": false,
     "prompt": "The figure shows two campus bike-lane routes. Based on visual inspection, do they look parallel? Determine algebraically, and if not, find their intersection point.",
     "image": "25_bikepaths_l1.png",
     "answer": [
@@ -571,72 +180,9 @@
       "different slopes"
     ],
     "hints": [
-      "Don't just eyeball it — compare the actual slopes of the two lines.",
-      "Read (or calculate) the slope of each line from the graph.",
-      "The two slopes here are noticeably different from each other.",
-      "Final answer: not parallel, since the slopes differ. Set the two equations equal to solve for the intersection point using your own read values."
-    ]
-  },
-  {
-    "id": "3.6b",
-    "topic": "Parallel Lines",
-    "difficulty": "Medium",
-    "prompt": "The figure shows two more bike-lane routes, l1 and l2, with very similar slopes. Based on visual inspection, do they look parallel? Determine algebraically, and if not, find their intersection point.",
-    "image": "26_parallel_lines.png",
-    "answer": [
-      "not parallel",
-      "slopes are close but not equal"
-    ],
-    "hints": [
-      "These two lines look almost parallel visually — that's exactly why you shouldn't rely on the picture alone.",
-      "Carefully read (or calculate) each line's exact slope.",
-      "Compare the two slope values precisely, not just approximately.",
-      "Final answer: not parallel — the slopes are close but not identical. Solve the two equations together to find the exact intersection point."
-    ]
-  },
-  {
-    "id": "warmup-1",
-    "topic": "Warm-up (Calibration)",
-    "difficulty": "Warm-up",
-    "prompt": "Solve the equation: 3x + 5 = 2x + 11",
-    "image": null,
-    "answer": [
-      "x=6"
-    ],
-    "hints": [
-      "Get all the x terms on one side and constants on the other.",
-      "3x - 2x = 11 - 5",
-      "Final answer: x = 6"
-    ]
-  },
-  {
-    "id": "warmup-2",
-    "topic": "Warm-up (Calibration)",
-    "difficulty": "Warm-up",
-    "prompt": "Given f(x) = 2x² - 3x + 1, find the value of f(2).",
-    "image": null,
-    "answer": [
-      "3"
-    ],
-    "hints": [
-      "Substitute x = 2 into the expression.",
-      "2(2)² - 3(2) + 1",
-      "Final answer: f(2) = 3"
-    ]
-  },
-  {
-    "id": "warmup-3",
-    "topic": "Warm-up (Calibration)",
-    "difficulty": "Warm-up",
-    "prompt": "Simplify: 3(x+2) - 2(x-1)",
-    "image": null,
-    "answer": [
-      "x+8"
-    ],
-    "hints": [
-      "Distribute both terms first.",
-      "3x + 6 - 2x + 2",
-      "Final answer: x + 8"
+      "Don't just eyeball whether the lines look parallel — compare their actual slopes.",
+      "Read or calculate the slope of each line from the graph using rise over run.",
+      "If the slopes differ, think about how you'd find where the two lines cross."
     ]
   }
 ]

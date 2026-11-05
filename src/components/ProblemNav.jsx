@@ -4,8 +4,10 @@ const DIFFICULTY_STYLES = {
   Hard: 'bg-red-100 text-red-700 border border-red-300',
 }
 
-export default function ProblemNav({ problem, currentIndex, total, onPrev, onNext }) {
-  const progress = ((currentIndex + 1) / total) * 100
+const MODE_LABELS = { off: 'Off', timing: 'Timing', mirror: 'Mirror' }
+
+export default function ProblemNav({ problem, phaseLabel, indexInPhase, totalInPhase, mode, onPrev, onNext, nextLabel }) {
+  const progress = ((indexInPhase + 1) / totalInPhase) * 100
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
@@ -13,7 +15,7 @@ export default function ProblemNav({ problem, currentIndex, total, onPrev, onNex
       <div className="flex items-center justify-between gap-3">
         <button
           onClick={onPrev}
-          disabled={currentIndex === 0}
+          disabled={indexInPhase === 0}
           className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 text-gray-400 disabled:opacity-40 disabled:cursor-not-allowed enabled:hover:bg-gray-50 enabled:text-gray-600 transition-colors"
         >
           ‹ Previous
@@ -21,25 +23,29 @@ export default function ProblemNav({ problem, currentIndex, total, onPrev, onNex
 
         <div className="flex items-center gap-3 min-w-0">
           <span className="text-sm font-semibold text-gray-800 truncate">
-            {currentIndex + 1}. {problem.topic}
+            {problem.topic}
           </span>
           <span className={`shrink-0 text-xs font-semibold px-2.5 py-1 rounded-full ${DIFFICULTY_STYLES[problem.difficulty] ?? 'bg-gray-100 text-gray-600'}`}>
             {problem.difficulty}
           </span>
+          {mode && (
+            <span className="shrink-0 text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-700 border border-indigo-300">
+              Mode: {MODE_LABELS[mode] ?? mode}
+            </span>
+          )}
         </div>
 
         <button
           onClick={onNext}
-          disabled={currentIndex === total - 1}
-          className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 text-gray-400 disabled:opacity-40 disabled:cursor-not-allowed enabled:hover:bg-gray-50 enabled:text-gray-600 transition-colors"
+          className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors"
         >
-          Next ›
+          {nextLabel ?? 'Next ›'}
         </button>
       </div>
 
       {/* Problem counter */}
       <p className="text-center text-xs text-gray-400 mt-3">
-        Problem {currentIndex + 1} of {total}
+        {phaseLabel} — Problem {indexInPhase + 1} of {totalInPhase}
       </p>
 
       {/* Progress bar */}
